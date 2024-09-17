@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Invoice</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    body {
+      background: #f2f2f2;
+    }
+
+    .invoice {
+      margin: 50px auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .logo {
+      max-height: 70px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .dl-horizontal {
+      margin: 0;
+    }
+
+    .mono {
+      font-family: monospace;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .invoice {
+        width: auto !important;
+      }
+
+      .invoice-body {
+        padding: 15px;
+      }
+
+      .invoice-footer {
+        font-size: 0.9em;
+      }
+
+      .colfix {
+        width: 20%;
+      }
+
+      .invoice-header h1 {
+        font-size: 1.5em;
+      }
+
+      .invoice-header .text-muted {
+        font-size: 0.8em;
+      }
+
+      .media-body {
+        font-size: 0.8em;
+        word-wrap: break-word; /* Add this line to wrap long text */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container invoice">
+    <div class="invoice-header">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <h1>Invoice <small>With Credit</small></h1>
+          <h4 class="text-muted">NO: 554775/R1 | Date: 01/01/2015</h4>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+          <div class="media">
+            <div class="media-left">
+              <img class="media-object logo" src="https://dummyimage.com/70x70/000/fff&text=ACME" />
+            </div>
+            <ul class="media-body list-unstyled">
+              <li><strong>Acme Corporation</strong></li>
+              <li>Software Development</li>
+              <li>Field 3, Moon</li>
+              <li>info@acme.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="invoice-body">
+      <div class="row">
+        <div class="col-xs-12 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Company Details</h3>
+            </div>
+            <div class="panel-body">
+              <dl class="dl-horizontal">
+                <dt>Name</dt>
+                <dd><strong>Acme Corporation</strong></dd>
+                <dt>Industry</dt>
+                <dd>Software Development</dd>
+                <dt>Address</dt>
+                <dd>Field 3, Moon</dd>
+                <dt>Phone</dt>
+                <dd>123.4456.4567</dd>
+                <dt>Email</dt>
+                <dd>mainl@acme.com</dd>
+                <dt>Tax NO</dt>
+                <dd class="mono">123456789</dd>
+                <dt>Tax Office</dt>
+                <dd>A' Moon</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-7">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Customer Details</h3>
+            </div>
+            <div class="panel-body">
+              <dl class="dl-horizontal">
+                <dt>Name</dt>
+                <dd>Microsoft Corporation</dd>
+                <dt>Industry</dt>
+                <dd>Software Development</dd>
+                <dt>Address</dt>
+                <dd>One Microsoft Way Redmond, WA 98052-7329, USA</dd>
+                <dt>Phone</dt>
+                <dd>(425) 882-8080</dd>
+                <dt>Email</dt>
+                <dd>contact@microsoft.com</dd>
+                <dt>Tax NO</dt>
+                <dd class="mono">123456789</dd>
+                <dt>&nbsp;</dt>
+                <dd>&nbsp;</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Services / Products</h3>
+        </div>
+        <table class="table table-bordered table-condensed">
+          <!-- Table content... -->
+        </table>
+      </div>
+      <div class="panel panel-default">
+        <table class="table table-bordered table-condensed">
+          <!-- Table content... -->
+        </table>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <i>Comments / Notes</i>
+              <hr style="margin:3px 0 5px" /> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit repudiandae numquam sit facere blanditiis, quasi distinctio ipsam? Libero odit ex expedita, facere sunt, possimus consectetur dolore, nobis iure amet vero.
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Payment Method</h3>
+            </div>
+            <div class="panel-body">
+              <p>For your convenience, you may deposit the final amount at one of our banks</p>
+              <ul class="list-unstyled">
+                <li>Alpha Bank - <span class="mono">MO123456789456123</span></li>
+                <li>Beta Bank - <span class="mono">MO123456789456123</span></li>
+                <li>Gamma Bank - <span class="mono">MO123456789456123</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="invoice-footer">
+      Thank you for choosing our services.
+      <br/> We hope to see you again soon
+      <br/>
+      <strong>~ACME~</strong>
+    </div>
+  </div>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
